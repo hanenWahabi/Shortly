@@ -1,0 +1,72 @@
+.footer {
+  background-color: hsl(255, 11%, 22%);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 100%;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  text-align: left;
+
+  &__name {
+    grid-column: 2/3;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__features {
+    grid-column: 4/5;
+  }
+
+  &__title {
+    margin-top: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  &__link {
+    margin-top: 0;
+    color: hsl(257, 7%, 63%);
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  &__link:hover {
+    color: hsl(180, 66%, 59%);
+  }
+
+  &__icons {
+    width: max-content;
+    grid-column: 8/9;
+
+    img {
+      width: 18px;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media (max-width: 624px) {
+  .footer {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fit, max-content);
+    grid-row: 30px;
+    &__name,
+    &__features,
+    &__resources,
+    &__company {
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__icons {
+      grid-column: 1;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+  }
+}
