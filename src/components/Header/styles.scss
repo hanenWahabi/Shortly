@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,700");
+@import "../../assets/colors";
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2);
+  font-family: "Poppins", sans-serif;
+
+  &__name {
+    color: $Dark-Blue;
+    font-weight: 700;
+    grid-column: 2/3;
+  }
+  &__name:hover {
+    color: $Dark-Violet;
+    cursor: pointer;
+  }
+  &__menu {
+    display: none;
+  }
+  &__navbar {
+    grid-column: 3/12;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__link {
+      color: $Grayish-Violet;
+      font-weight: 700;
+      font-size: 16px;
+      margin: 0 15px;
+
+      &--right {
+        margin-left: auto;
+        margin-right: 10px;
+      }
+    }
+    &__link:hover,
+    &__link--right:hover {
+      color: $Dark-Violet;
+      cursor: pointer;
+    }
+    &__signup {
+      background-color: $Cyan;
+      padding: 10px 15px;
+      border: 1px hsl(180, 66%, 59%);
+      color: white;
+      font-size: 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .header__navbar {
+    flex-direction: column;
+    grid-column-start: 2;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .header__navbar__link,
+  .header__navbar__link--right {
+    margin: 7px 0;
+  }
+  .Navbar__Items {
+    display: none;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+
+  .header__menu {
+    grid-column-end: 12;
+    display: initial;
+    cursor: pointer;
+    margin: 25px 0;
+  }
+  .header__navbar__signup {
+    padding: 10px 60px;
+    font-size: 16px;
+  }
+}

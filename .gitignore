@@ -1,5 +1,5 @@
 haters/
-node_modules/
+node_modules
 .next/
 .build/
 layout.md
