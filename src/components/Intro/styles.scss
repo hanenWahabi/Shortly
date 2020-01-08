@@ -1,0 +1,76 @@
+@import "../../assets/colors";
+.Intro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 30px;
+
+  &__body {
+    grid-column: 2/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    color: $Dark-Blue;
+    font-weight: 700;
+    font-size: 38px;
+    margin: 0;
+  }
+  &__text {
+    color: $Grayish-Violet;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  &__button {
+    background-color: $Cyan;
+    padding: 10px 15px;
+    border: 1px hsl(180, 66%, 59%);
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    height: 40px;
+    width: max-content;
+  }
+
+  &__img {
+    grid-column: 8/-1;
+    overflow: hidden;
+    margin: 0;
+  }
+  &__img > img {
+    width: 115%;
+    object-fit: cover;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 588px) {
+  .Intro {
+    grid-template-rows: repeat(2, auto);
+    // row-gap: 20px;
+    text-align: center;
+
+    &__body {
+      grid-column: 2/12;
+      grid-row: 2/3;
+      align-items: center;
+    }
+  }
+  .Intro__img {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    overflow: hidden;
+    margin: 0;
+  }
+  .Intro__img > img {
+    width: 130%;
+    padding: 20px;
+    object-fit: cover;
+  }
+  .Intro__button {
+    padding: 10px 25px;
+  }
+}
