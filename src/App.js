@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { SearchBar } from "./components/SearchBar";
+import { Statistic } from "./components/Statistic";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Intro />
       <SearchBar />
+      <Statistic />
     </div>
   );
 }

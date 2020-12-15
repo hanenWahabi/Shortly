@@ -1,0 +1,47 @@
+@import "../../assets/colors";
+
+.container {
+  display: flex;
+  align-content: center;
+  padding-bottom: 30px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $Dark-Violet;
+  margin-bottom: 0;
+}
+.subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: $Grayish-Violet;
+  width: 45%;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.line {
+  background-color: hsl(180, 66%, 59%);
+  width: 25px;
+  height: 7px;
+  display: flex;
+  align-self: center;
+}
+
+@media (max-width: 560px) {
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .line {
+    width: 7px;
+    height: 60px;
+  }
+}
